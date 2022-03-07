@@ -6,8 +6,9 @@ interface Props{
     webinar :IWebinar
 }
 const WebinarCard = (webinar:Props)=>{
-    const createdTime = moment().format("dddd Do MMM")
+    const createdTime = moment().format("DD/MM/yyyy")
     const time = moment().add(10,'days').format("YYYY/MM/DD hh:mm")
+    const content = webinar.webinar.content? webinar.webinar.content: '<p>No details available</p>';
     return(
         <div className={classes.container}>
             <div className={classes.createdAt}>
@@ -17,7 +18,7 @@ const WebinarCard = (webinar:Props)=>{
                 {webinar.webinar.title}
             </div>
             <div
-                dangerouslySetInnerHTML={{__html:webinar.webinar.content}}
+                dangerouslySetInnerHTML={{__html:content}}
                 className={classes.content}>
             </div>
             <div className={classes.time}>

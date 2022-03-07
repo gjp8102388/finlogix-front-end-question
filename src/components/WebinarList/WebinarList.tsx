@@ -6,6 +6,7 @@ import IWebinar from "../../interfaces/IWebinar";
 import classes from "./WebinarList.module.scss"
 const WebinarList = ()=> {
     const {data:webinarList,loading} = useFetch(getPostList,[6,1],[],[])
+    console.log(webinarList)
     return(
         <div className={classes.webinarList}>
         <div className={classes.container} >

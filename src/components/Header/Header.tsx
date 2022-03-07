@@ -8,7 +8,7 @@ const Header = () => {
             </div>
             <div className={classes.text}>
                <p>
-                   Whether you are new to foreign exchange trading or already have some market experience, we believe that a solid FX<br/> trading education is vital to your success as a trader
+                   Whether you are new to foreign exchange trading or already have some market experience, we believe that a solid FX trading education is vital to your success as a trader
                </p>
             </div>
         </div>

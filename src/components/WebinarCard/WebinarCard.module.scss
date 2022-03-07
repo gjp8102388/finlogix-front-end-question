@@ -4,12 +4,12 @@
   align-items: flex-start;
   flex-flow: column;
   width: 340px;
-  height: 300px;
+  height: 260px;
   background-color: white;
   border: 1px solid #D6D6D6;
   box-shadow: 1px 2px 6px rgba(219, 219, 219, 0.5);
   border-radius: 4px;
-  min-width: 0;
+  padding: 20px;
 }
 .createdAt{
   font-style: normal;
@@ -20,32 +20,35 @@
   color: #01254F;
 }
 .title{
+  margin-top: 20px;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 1.06667px;
   color: #01254F;
+  max-width: 280px;
 }
 .content{
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: -webkit-box;
-  //display: inline-block;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-top: 12px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0.933333px;
-  color: #333333;
-  -webkit-line-clamp:2;
-  text-overflow: ellipsis
+  color: rgba(0, 0, 0, 0.65);
 }
 .time{
+  margin-top: 20px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0.933333px;
-  color: #333333;
+  color: rgba(0, 0, 0, 0.65);;
 }
 .register{
   font-style: normal;
@@ -56,4 +59,8 @@
   color: #43AA15;
 }
 
-
+@media (max-width: 1024px) {
+  .container {
+    width: 300px;
+  }
+}
