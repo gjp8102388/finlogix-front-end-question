@@ -1,0 +1,68 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border: solid #f4f3f3;
+  border-width: 0 0 1px 0;
+  gap: 40px;
+}
+.navItems{
+  margin-left: 60px;
+  flex: 0 0 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .item{
+    flex: 1;
+    font-size: 16px;
+    color: black;
+    line-height: 24px;
+    cursor: pointer;
+  }
+  .arrow{
+    margin: 5px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+}
+.buttons{
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .login{
+    margin:0 10px;
+    flex: 0;
+    background: white;
+    border: 1px solid #01254F;
+    color: #003476;
+    padding: 10px 52px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  .logout{
+    margin:0 10px;
+    flex: 0;
+    background: #003476;
+    border: 1px solid #01254F;
+    color: white;
+    padding: 10px 52px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+}
+
+
