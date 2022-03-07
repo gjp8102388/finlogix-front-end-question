@@ -1,0 +1,40 @@
+.webinarList{
+  background-color: #F2F2F2;
+  width: 100%;
+}
+.container{
+  //display: flex;
+  //flex-flow: nowrap;
+  //overflow-x: auto;
+  //gap: 30px;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-auto-flow: column;
+  gap: 50px;
+  overflow-x: scroll;
+  padding: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: grab;
+}
+.container::-webkit-scrollbar{
+  display: none;
+}
+.card{
+  flex: 0 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}

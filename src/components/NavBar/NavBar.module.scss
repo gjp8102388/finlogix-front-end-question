@@ -1,14 +1,15 @@
 .container{
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-evenly;
   padding: 20px 40px;
   border: solid #f4f3f3;
   border-width: 0 0 1px 0;
-  gap: 40px;
+}
+.logo{
+  height: 100%;
 }
 .navItems{
-  margin-left: 60px;
   flex: 0 0 60%;
   display: flex;
   justify-content: flex-start;
@@ -28,6 +29,11 @@
     padding: 2px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+  }
+}
+@media (max-width: 768px) {
+  .navItems{
+    display: none;
   }
 }
 .buttons{
