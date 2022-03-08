@@ -13,7 +13,7 @@ const NavBar = () => {
     const userLogin = useSelector<RootState, IUserState>(
         (state: RootState) => state.userLogin
     )
-    const {isLogin, userInfo} = userLogin;
+    const {isLogin} = userLogin;
     const handleClick = () => {
         history.push('/login')
     }
