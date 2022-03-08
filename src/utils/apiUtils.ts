@@ -6,8 +6,9 @@ const baseUrl = process.env.REACT_APP_FINLOGIX_API;
 axios.interceptors.request.use(
     async (config) => {
         if (localStorage.getItem('token')) {
+            const token = localStorage.getItem('token');
             config.headers = {
-                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Authorization: `Bearer ${token}`,
             };
         }
         return config;
@@ -15,7 +16,7 @@ axios.interceptors.request.use(
     (error => Promise.reject(error)),
 );
 
-export const login = ({email, password}: ILogin) =>
+export const doLogin = ({email, password}: ILogin) =>
     axios({
         method: 'post',
         url: `${baseUrl}/auth/email/login`,
@@ -24,12 +25,18 @@ export const login = ({email, password}: ILogin) =>
             password,
         },
     });
-
-export const getPostList = (per_page:number,page:number)=>
+export const doLogout = () => {
     axios({
-        method:'get',
+        method: 'post',
+        url: `${baseUrl}/auth/logout`,
+    })
+}
+
+export const getPostList = (per_page: number, page: number) =>
+    axios({
+        method: 'get',
         url: `${baseUrl}/posts`,
-        params:{
+        params: {
             per_page,
             page,
         }

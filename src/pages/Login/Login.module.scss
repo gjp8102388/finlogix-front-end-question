@@ -1,21 +1,41 @@
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  padding: 3rem;
+  background-color: #F2F2F2;
 }
-.formGroup{
+
+.form {
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
+  padding: 100px;
+  border-radius: 1rem;
+}
+
+.label {
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.formGroup {
   display: flex;
   flex: 0 0 auto;
   flex-flow: row wrap;
   align-items: center;
   margin-bottom: 0;
 }
-.formControl{
+
+.formControl {
+  height: 35px;
   display: block;
   width: 100%;
+  font-size: 18px;
 }
-.button{
+
+.button {
+  height: 40px;
   margin-top: 10px;
   flex: 0;
   width: 100%;
@@ -28,4 +48,23 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 3px;
+}
+
+.button:disabled {
+  color: black;
+  background: darkgray;
+  border: 1px solid darkgray;
+  cursor: default;
+}
+
+@media (max-width: 1024px) {
+  .form {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .form {
+    padding: 20px;
+  }
 }

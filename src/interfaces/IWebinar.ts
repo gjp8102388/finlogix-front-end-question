@@ -1,8 +1,8 @@
-export default interface IWebinar{
-    id:number;
-    created_at:string;
+export default interface IWebinar {
+    id: number;
+    created_at: string;
     title: string;
-    content:string
-    favourited:boolean;
+    content: string
+    favourited: boolean;
 }
 
