@@ -1,4 +1,4 @@
-.container{
+.container {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -11,7 +11,8 @@
   border-radius: 4px;
   padding: 20px;
 }
-.createdAt{
+
+.createdAt {
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -19,7 +20,8 @@
   letter-spacing: 0.93333px;
   color: #01254F;
 }
-.title{
+
+.title {
   margin-top: 20px;
   font-style: normal;
   font-weight: 600;
@@ -29,7 +31,8 @@
   color: #01254F;
   max-width: 280px;
 }
-.content{
+
+.content {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -42,7 +45,8 @@
   line-height: 20px;
   color: rgba(0, 0, 0, 0.65);
 }
-.time{
+
+.time {
   margin-top: 20px;
   font-style: normal;
   font-weight: 400;
@@ -50,7 +54,8 @@
   line-height: 20px;
   color: rgba(0, 0, 0, 0.65);;
 }
-.register{
+
+.register {
   font-style: normal;
   font-weight: 600;
   font-size: 14px;

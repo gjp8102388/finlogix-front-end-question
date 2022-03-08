@@ -1,4 +1,4 @@
-.header{
+.header {
   height: 250px;
   text-align: center;
   display: flex;
@@ -6,32 +6,36 @@
   flex-direction: column;
   align-items: center;
 }
-.title{
+
+.title {
   font-weight: 600;
   font-size: 28px;
   line-height: 40px;
   color: #01254F;
 }
-.text{
+
+.text {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   margin: 0 40px;
-  color:rgba(0, 0, 0, 0.65);
+  color: rgba(0, 0, 0, 0.65);
   width: 800px;
 }
-@media (max-width: 1024px){
-  .text{
+
+@media (max-width: 1024px) {
+  .text {
     font-size: 16px;
     line-height: 24px;
     width: 93%;
   }
 }
-@media (max-width: 450px){
-  .title{
+
+@media (max-width: 450px) {
+  .title {
     line-height: 33px;
   }
-  .text{
+  .text {
     font-size: 12px;
     line-height: 20px;
     width: 310px;
