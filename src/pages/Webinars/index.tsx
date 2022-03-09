@@ -27,7 +27,7 @@ const Webinars = () => {
             {path?.path === "/registered" ? <WebinarList navScroll={navScroll} favorited={1} isFav={true}/> : <WebinarList navScroll={navScroll} isFav={false} favorited={0}/>}
             <StaticInfo/>
             <div ref={formRef}>
-                <WebinarForm webinarList={webinarList}/>
+                {path?.path === "/registered" ? null : (<WebinarForm webinarList={webinarList}/>)}
             </div>
         </>
     )
