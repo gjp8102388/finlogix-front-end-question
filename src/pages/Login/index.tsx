@@ -18,7 +18,7 @@ const Login = () => {
     const handleSubmit = async (event: any) => {
         event.preventDefault();
         await dispatch(login({email, password}));
-        history.push('/')
+        history.goBack();
     }
     return (
         <>

@@ -32,12 +32,27 @@ export const doLogout = () => {
     })
 }
 
-export const getPostList = (per_page: number, page: number) =>
+export const getPostList = (favourited: number, per_page: number, page: number) =>
     axios({
         method: 'get',
         url: `${baseUrl}/posts`,
         params: {
+            favourited,
             per_page,
             page,
         }
+    })
+export const doFavPost = (webinarId: number | string) =>
+    axios({
+        method: 'post',
+        url: `${baseUrl}/favourites`,
+        data: {
+            ids: [webinarId],
+            model: 'post',
+        }
+    })
+export const doUnFavPost = (webinarId: number | string) =>
+    axios({
+        method: 'delete',
+        url: `${baseUrl}/favourites/post/${webinarId}`
     })

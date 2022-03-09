@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from "./NavBar.module.scss"
 import logo from "../../logo.svg"
-import {useHistory} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../store";
 import IUserState from "../../interfaces/IUserState";
@@ -24,7 +24,9 @@ const NavBar = () => {
     }
     return (
         <div className={classes.container}>
-            <img className={classes.logo} src={logo} alt={logo}/>
+            <Link to="/">
+                <img className={classes.logo} src={logo} alt={logo}/>
+            </Link>
             <div className={classes.navItems}>
                 <div className={classes.item}>
                     Why ACY <i className={classes.arrow}/>
@@ -38,9 +40,11 @@ const NavBar = () => {
                 <div className={classes.item}>
                     Education <i className={classes.arrow}/>
                 </div>
-                <div className={classes.item}>
-                    Partners <i className={classes.arrow}/>
-                </div>
+                <Link to="/registered">
+                    <div className={classes.item}>
+                        Registered <i className={classes.arrow}/>
+                    </div>
+                </Link>
             </div>
             <div className={classes.buttons}>
                 {isLogin ? (<button className={classes.logout} onClick={handleLogout}>
