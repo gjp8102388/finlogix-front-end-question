@@ -2,10 +2,6 @@
 
 This project was bootstrapped with [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) and [`react-app --template typescript `](https://create-react-app.dev/docs/adding-typescript/).
 
-## Live Demo
-
-
-
 ## Tech Stack
 
 - TypeScript
