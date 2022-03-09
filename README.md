@@ -18,6 +18,13 @@ Before you run this project, you should do the following two things step by step
 
 Install all the required packages for this project.
 
+## Environment Variables
+
+- Add `.env.` file and set your environment variables. 
+```javascript
+REACT_APP_FINLOGIX_API=https://xxx.api.com/v1
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
