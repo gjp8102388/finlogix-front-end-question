@@ -43,7 +43,6 @@ const WebinarForm = (props: Props) => {
         window.location.reload();
         return setIsSubmit(false);
     }
-    // @ts-ignore
     return (
         <div className={classes.container}>
             <div className={classes.form}>

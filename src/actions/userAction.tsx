@@ -19,11 +19,10 @@ export const login = ({email, password}: ILogin): ThunkAction<Promise<void>, Roo
             type: USER_LOGIN_SUCCESS,
             payload: userData,
         })
-    } catch (error) {
+    } catch (error:any) {
         //user login fail
         dispatch({
             type: USER_LOGIN_FAIL,
-            // @ts-ignore
             payload: error.response && error.response.data.message ? error.response.data.message : error.message
         })
     }

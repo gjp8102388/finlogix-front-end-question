@@ -27,10 +27,9 @@ export const fetchWebinarList = (favourited: number, per_page: number, page: num
             type: FETCH_WEBINAR_LIST_SUCCESS,
             payload: data.data,
         })
-    } catch (error) {
+    } catch (error:any) {
         dispatch({
             type: FETCH_WEBINAR_LIST_FAIL,
-            // @ts-ignore
             payload: error.response && error.response.data.message ? error.response.data.message : error.message
         })
     }
@@ -46,10 +45,9 @@ export const favWebinar = (webinarId: string | number): ThunkAction<Promise<void
             type: FAV_WEBINAR_SUCCESS
         })
 
-    } catch (error) {
+    } catch (error:any) {
         dispatch({
             type: FAV_WEBINAR_FAIL,
-            //@ts-ignore
             payload: error.response && error.response.data.message ? error.response.data.message : error.message
         })
     }
@@ -64,10 +62,9 @@ export const unFavWebinar = (webinarId: string | number): ThunkAction<Promise<vo
         dispatch({
             type: UNFAV_WEBINAR_SUCCESS
         })
-    } catch (error) {
+    } catch (error:any) {
         dispatch({
             type: UNFAV_WEBINAR_FAIL,
-            //@ts-ignore
             payload: error.response && error.response.data.message ? error.response.data.message : error.message
         })
     }
